@@ -22,4 +22,9 @@ public class Task {
     public void markAsCompleted() {
         this.isCompleted = true; // Done n dusted
     }
+
+    // Print out the task description and whether it's completed or still hanging around
+    public void printTask() {
+        System.out.println(description + (isCompleted ? " (Completed) " : " (Pending) "));
+    }
 }
