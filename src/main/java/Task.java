@@ -7,4 +7,9 @@ public class Task {
         this.description = description;
         this.isCompleted = false; // Still work in progress
     }
+
+    // Description of the task to remember what it's about
+    public String getDescription() {
+        return description;
+    }
 }
