@@ -7,4 +7,16 @@ public class User {
         this.name = name;
         this.taskList = new TaskList(); // Every user has their own to-do list
     }
+
+    // Get the users name, in case we forget.. ( just in case)
+    public String getName() {
+        return name;
+    }
+
+    // Add new task to the users to-do list
+    public void addTask(Task task) {
+        taskList.addTask(task); // Passing off to the task list
+    }
+
+
 }
