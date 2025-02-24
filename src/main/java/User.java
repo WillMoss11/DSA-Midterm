@@ -22,4 +22,10 @@ public class User {
     public void markTaskAsCompleted(String description) {
         taskList.markTaskAsCompleted(description); // Task compleyted? Task marked
     }
+
+    // Print out all the tasks for the user with the completion status
+    public void printAllTasks() {
+        System.out.println(name + "To-Do List:");
+        taskList.printAllTasks(); // Ask task list to show everything
+    }
 }
