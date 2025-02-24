@@ -17,4 +17,9 @@ public class Task {
     public boolean isCompleted() {
         return isCompleted;
     }
+
+    // Marks the task as completed. Finally, the task can now rest
+    public void markAsCompleted() {
+        this.isCompleted = true; // Done n dusted
+    }
 }
