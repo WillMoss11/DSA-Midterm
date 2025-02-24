@@ -18,5 +18,8 @@ public class User {
         taskList.addTask(task); // Passing off to the task list
     }
 
-
+    // Mark certain task as completed
+    public void markTaskAsCompleted(String description) {
+        taskList.markTaskAsCompleted(description); // Task compleyted? Task marked
+    }
 }
