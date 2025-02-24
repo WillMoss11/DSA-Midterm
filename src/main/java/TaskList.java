@@ -32,4 +32,21 @@ public class TaskList {
         }
         System.out.println("Task not found!"); // In case the task don't exist
     }
+
+    // Print out all tasks in the list with their status (Done or still around)
+    public void printAllTasks() {
+        if (head == null) {
+            System.out.println("No tasks yet. Add some!");
+            return;
+        }
+        Node current = head;
+        while (current != null) {
+            current.task.printTask(); // Print task details
+            current = current.next;
+        }
+    }
+
+
+        }
+    }
 }
