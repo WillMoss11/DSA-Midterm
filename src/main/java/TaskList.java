@@ -46,7 +46,14 @@ public class TaskList {
         }
     }
 
+    // Inside Node class to create that linked list
+    private class Node {
+        Task task;
+        Node next;
 
+        Node(Task task) {
+            this.task = task;
+            this.next = null; // Task all alone
         }
     }
 }
