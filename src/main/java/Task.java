@@ -12,4 +12,9 @@ public class Task {
     public String getDescription() {
         return description;
     }
+
+    // Check if the tsak is completed, or if it's still waiting to be used
+    public boolean isCompleted() {
+        return isCompleted;
+    }
 }
