@@ -1,6 +1,6 @@
 public class User {
     private String name;
-    private TaskList tasklist;
+    private TaskList taskList;
 
     // Creating user with a unique name and an empty task list
     public User(String name) {
