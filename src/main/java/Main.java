@@ -75,5 +75,19 @@ public class Main {
         }
         return null;
     }
+    // User menu
+    private static void userMenu(Scanner scanner, User user) {
+        boolean userRunning = true;
+        while (userRunning) {
+            System.out.println("\n--" + user.getName() + "'s Task Menu ---");
+            System.out.println("1. Add a task");
+            System.out.println("2. Mark task as completed");
+            System.out.println("3. View all tasks");
+            System.out.println("4. Return to main menu");
+            System.out.print("Choose an option: ");
+            int choice = scanner.nextInt();
+            scanner.nextLine(); // pretty function
+        }
+    }
 
 }
