@@ -53,10 +53,18 @@ public class Main {
                         System.out.println("User not found!");
                     }
                     break;
-
+                case 3:
+                    // Exit function
+                    running = false;
+                    System.out.println("Goodbye!");
+                    break;
+                default:
+                    System.out.println("Invalid option!");
             }
         }
 
-
+        scanner.close();
     }
+
+    // user by name method
 }
