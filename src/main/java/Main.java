@@ -67,4 +67,13 @@ public class Main {
     }
 
     // user by name method
+    private static User getUserByName(User[] users, String name, int userCount) {
+        for (int i = 0; i < userCount; i++) {
+            if (users[i].getName().equalsIgnoreCase(name)) {
+                return users[i];
+            }
+        }
+        return null;
+    }
+
 }
