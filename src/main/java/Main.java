@@ -66,7 +66,7 @@ public class Main {
         scanner.close();
     }
 
-    // user by name method
+    // user by name mnethod
     private static User getUserByName(User[] users, String name, int userCount) {
         for (int i = 0; i < userCount; i++) {
             if (users[i].getName().equalsIgnoreCase(name)) {
@@ -76,7 +76,7 @@ public class Main {
         return null;
 
     }
-    // User menu
+    // User menu scan
     private static void userMenu(Scanner scanner, User user) {
         boolean userRunning = true;
         while (userRunning) {
@@ -111,7 +111,7 @@ public class Main {
                     user.printAllTasks();
                     break;
                 case 4:
-                    // Return to main menu
+                    // Return to maiin menu
                     userRunning = false;
                     System.out.println("Returning to main menu...");
                     break;
