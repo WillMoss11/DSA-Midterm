@@ -2,6 +2,11 @@ public class User {
     private String name;
     private TaskList taskList;
 
+    // Task list
+    public TaskList getTaskList() {
+        return taskList;
+    }
+
     // Creating user with a unique name and an empty task list
     public User(String name) {
         this.name = name;

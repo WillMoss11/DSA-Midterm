@@ -24,20 +24,22 @@ public class TaskList {
     public void markTaskAsCompleted(String description) {
         if (head == null) {  // Check if the task list is empty
             System.out.println("No tasks yet.");
-            return;  // Exit the method if there are no tasks
+            return;  // Exit early if no tasks are available
         }
 
+        // Proceed only if there are tasks in the list
         Node temp = head;
         while (temp != null) {
             if (temp.task.getDescription().equals(description)) {
                 temp.task.markAsCompleted();
-                System.out.println("Task marked as completed.");
-                return;  // Exit once the task is found and marked
+                System.out.println("Task marked as completed!");
+                return;  // Exit after marking the task as completed
             }
             temp = temp.next;
         }
 
-        System.out.println("Task not found.");
+        // If we reach here, the task was not found
+        System.out.println("Task with the description '" + description + "' not found.");
     }
 
     // Print out all tasks in the list with their status (Done or still around)
@@ -62,5 +64,8 @@ public class TaskList {
             this.task = task;
             this.next = null; // Task all alone
         }
+    }
+    public boolean isEmpty() {
+        return head == null;  // If head is null, the list is empty
     }
 }

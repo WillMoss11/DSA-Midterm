@@ -74,6 +74,7 @@ public class Main {
             }
         }
         return null;
+
     }
     // User menu
     private static void userMenu(Scanner scanner, User user) {
@@ -97,11 +98,13 @@ public class Main {
                     System.out.println("Task added!");
                     break;
                 case 2:
-                    // Mark task completed
-                    System.out.print("Enter task description to mark as completed: ");
-                    String taskToComplete = scanner.nextLine();
-                    user.markTaskAsCompleted(taskToComplete);
-                    System.out.println("Task marked as completed!");
+                    if (user.getTaskList().isEmpty()) {  // Check if there are any tasks first
+                        System.out.println("No tasks yet.");
+                    } else {
+                        System.out.print("Enter task description to mark as completed: ");
+                        String taskToComplete = scanner.nextLine();
+                        user.markTaskAsCompleted(taskToComplete);
+                    }
                     break;
                 case 3:
                     // View all users tasks
