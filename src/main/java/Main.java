@@ -40,6 +40,20 @@ public class Main {
                             System.out.println(users[i].getName());
                         }
                     }
+                    // When viewing users, brings to user menu for selected user
+                    System.out.print("\nEnter user name to manage tasks, or type 'back' to return to main menu: ");
+                    String name = scanner.nextLine();
+                    if (name.equalsIgnoreCase("back")) {
+                        break;
+                    }
+                    User user = getUserByName(users, name, userCount);
+                    if (user != null) {
+                        userMenu(scanner, user);
+                    } else {
+                        System.out.println("User not found!");
+                    }
+                    break;
+
             }
         }
 
