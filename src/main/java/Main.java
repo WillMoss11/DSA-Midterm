@@ -87,7 +87,34 @@ public class Main {
             System.out.print("Choose an option: ");
             int choice = scanner.nextInt();
             scanner.nextLine(); // pretty function
+
+            switch (choice) {
+                case 1:
+                    // Add task function
+                    System.out.print("Enter task description: ");
+                    String taskDescription = scanner.nextLine();
+                    user.addTask(new Task(taskDescription));
+                    System.out.println("Task added!");
+                    break;
+                case 2:
+                    // Mark task completed
+                    System.out.print("Enter task description to mark as completed: ");
+                    String taskToComplete = scanner.nextLine();
+                    user.markTaskAsCompleted(taskToComplete);
+                    System.out.println("Task marked as completed!");
+                    break;
+                case 3:
+                    // View all users tasks
+                    user.printAllTasks();
+                    break;
+                case 4:
+                    // Return to main menu
+                    userRunning = false;
+                    System.out.println("Returning to main menu...");
+                    break;
+                default:
+                    System.out.println("Invalid option!");
+            }
         }
     }
-
 }
