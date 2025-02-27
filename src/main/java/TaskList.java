@@ -20,17 +20,24 @@ public class TaskList {
         }
     }
 
-    // Mark a task as completed. Crossing off the list
+    // To mark a task as completed
     public void markTaskAsCompleted(String description) {
-        Node current = head;
-        while (current != null) {
-            if (current.task.getDescription().equals(description)) {
-                current.task.markAsCompleted(); // Mark it as done
-                return;
-            }
-            current = current.next;
+        if (head == null) {  // Check if the task list is empty
+            System.out.println("No tasks yet.");
+            return;  // Exit the method if there are no tasks
         }
-        System.out.println("Task not found!"); // In case the task don't exist
+
+        Node temp = head;
+        while (temp != null) {
+            if (temp.task.getDescription().equals(description)) {
+                temp.task.markAsCompleted();
+                System.out.println("Task marked as completed.");
+                return;  // Exit once the task is found and marked
+            }
+            temp = temp.next;
+        }
+
+        System.out.println("Task not found.");
     }
 
     // Print out all tasks in the list with their status (Done or still around)
