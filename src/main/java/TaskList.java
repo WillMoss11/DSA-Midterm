@@ -32,7 +32,7 @@ public class TaskList {
         while (temp != null) {
             if (temp.task.getDescription().equals(description)) {
                 temp.task.markAsCompleted();
-                System.out.println("Task marked as completed!");
+                System.out.println("Task marked as completed");
                 return;  // Exit after marking the task as completed
             }
             temp = temp.next;
@@ -45,7 +45,7 @@ public class TaskList {
     // Print out all tasks in the list with their status (Done or still around)
     public void printAllTasks() {
         if (head == null) {
-            System.out.println("No tasks yet. Add some!");
+            System.out.println("No tasks yet. Add some");
             return;
         }
         Node current = head;

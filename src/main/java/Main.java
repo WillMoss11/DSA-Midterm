@@ -25,16 +25,16 @@ public class Main {
                         String userName = scanner.nextLine();
                         users[userCount] = new User(userName);
                         userCount++;
-                        System.out.println("User " + userName + " created!");
+                        System.out.println("User " + userName + " created");
                     } else {
-                        System.out.println("Users limit reached!");
+                        System.out.println("Users limit reached pal");
                     }
                     break;
                 case 2:
                     // View all users function
                     System.out.println("\n--- All Users ---");
                     if (userCount == 0) {
-                        System.out.println("No users created yet!");
+                        System.out.println("No users created yet");
                     } else {
                         for (int i = 0; i < userCount; i++) {
                             System.out.println(users[i].getName());
@@ -50,16 +50,16 @@ public class Main {
                     if (user != null) {
                         userMenu(scanner, user);
                     } else {
-                        System.out.println("User not found!");
+                        System.out.println("User not found");
                     }
                     break;
                 case 3:
                     // Exit function
                     running = false;
-                    System.out.println("Goodbye!");
+                    System.out.println("Godspeed Friend");
                     break;
                 default:
-                    System.out.println("Invalid option!");
+                    System.out.println("Invalid option");
             }
         }
 
@@ -95,11 +95,11 @@ public class Main {
                     System.out.print("Enter task description: ");
                     String taskDescription = scanner.nextLine();
                     user.addTask(new Task(taskDescription));
-                    System.out.println("Task added!");
+                    System.out.println("Task has been added");
                     break;
                 case 2:
                     if (user.getTaskList().isEmpty()) {  // Check if there are any tasks first
-                        System.out.println("No tasks yet.");
+                        System.out.println("No tasks yet");
                     } else {
                         System.out.print("Enter task description to mark as completed: ");
                         String taskToComplete = scanner.nextLine();
@@ -116,7 +116,7 @@ public class Main {
                     System.out.println("Returning to main menu...");
                     break;
                 default:
-                    System.out.println("Invalid option!");
+                    System.out.println("Invalid option");
             }
         }
     }
